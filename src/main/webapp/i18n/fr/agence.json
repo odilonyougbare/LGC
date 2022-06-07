@@ -1,0 +1,35 @@
+{
+  "lgcApp": {
+    "agence": {
+      "home": {
+        "title": "Agences",
+        "createLabel": "Créer un nouveau Agence",
+        "createOrEditLabel": "Créer ou éditer un Agence",
+        "notFound": "Aucun Agence trouvé"
+      },
+      "created": "Un nouveau Agence a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Agence avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Agence avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Agence {{ id }} ?"
+      },
+      "detail": {
+        "title": "Agence"
+      },
+      "codeAgence": "Code Agence",
+      "denominationAgence": "Denomination Agence",
+      "typeAgence": "Type Agence",
+      "telephone": "Telephone",
+      "numeroWhatsapp": "Numero Whatsapp",
+      "email": "Email",
+      "autreContact": "Autre Contact",
+      "quartier": "Quartier",
+      "arrondissement": "Arrondissement",
+      "commune": "Commune",
+      "province": "Province",
+      "region": "Region",
+      "user": "User",
+      "client": "Client"
+    }
+  }
+}

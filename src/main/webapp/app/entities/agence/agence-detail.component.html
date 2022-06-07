@@ -1,0 +1,84 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="agence">
+            <h2><span jhiTranslate="lgcApp.agence.detail.title">Agence</span> {{ agence.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="lgcApp.agence.codeAgence">Code Agence</span></dt>
+                <dd>
+                    <span>{{ agence.codeAgence }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.denominationAgence">Denomination Agence</span></dt>
+                <dd>
+                    <span>{{ agence.denominationAgence }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.typeAgence">Type Agence</span></dt>
+                <dd>
+                    <span>{{ agence.typeAgence }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.telephone">Telephone</span></dt>
+                <dd>
+                    <span>{{ agence.telephone }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.numeroWhatsapp">Numero Whatsapp</span></dt>
+                <dd>
+                    <span>{{ agence.numeroWhatsapp }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.email">Email</span></dt>
+                <dd>
+                    <span>{{ agence.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.autreContact">Autre Contact</span></dt>
+                <dd>
+                    <span>{{ agence.autreContact }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.quartier">Quartier</span></dt>
+                <dd>
+                    <span>{{ agence.quartier }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.arrondissement">Arrondissement</span></dt>
+                <dd>
+                    <span>{{ agence.arrondissement }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.commune">Commune</span></dt>
+                <dd>
+                    <span>{{ agence.commune }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.province">Province</span></dt>
+                <dd>
+                    <span>{{ agence.province }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.region">Region</span></dt>
+                <dd>
+                    <span>{{ agence.region }}</span>
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.user">User</span></dt>
+                <dd>
+                    {{ agence.userLogin }}
+                </dd>
+                <dt><span jhiTranslate="lgcApp.agence.client">Client</span></dt>
+                <dd>
+                    <div *ngIf="agence.clientId">
+                        <a [routerLink]="['/client', agence.clientId, 'view']">{{ agence.clientDenomination }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/agence', agence.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

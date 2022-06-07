@@ -1,0 +1,69 @@
+entity Client {
+	codeClient String,
+    denomination String,
+    domaineActivite String,
+    siteWeb String,
+    compteFaceBook String,
+    compteTwitter String,
+}
+entity Agence{
+    codeAgence String,
+    denominationAgence String,
+    typeAgence String,
+    telephone String,
+    numeroWhatsapp String,
+    email String,
+    autreContact String,
+    quartier String,
+    arrondissement String,
+    commune String,
+    province String,
+    region String,
+
+}
+
+
+// an ignored comment
+/** not an ignored comment */
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+
+/**
+ * The Employee entity.
+ */
+
+
+enum Language {
+    FRENCH, ENGLISH
+}
+relationship OneToMany{
+  Client to Agence{client(denomination)}
+}
+relationship ManyToOne {
+    Client{user(login)} to User 
+    Agence{user(login)} to User 
+}
+
+
+
+// defining multiple oneToOne relationships
+
+
+// Set pagination options
+paginate Client, Agence with pagination
+
+service all with serviceImpl
+dto * with mapstruct
+
+filter * 
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

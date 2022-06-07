@@ -1,0 +1,55 @@
+{
+  "name": "Client",
+  "fields": [
+    {
+      "fieldName": "codeClient",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "denomination",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "domaineActivite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "siteWeb",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "compteFaceBook",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "compteTwitter",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "agence",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "agence"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "user",
+      "otherEntityField": "login"
+    }
+  ],
+  "changelogDate": "20211124043538",
+  "entityTableName": "client",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

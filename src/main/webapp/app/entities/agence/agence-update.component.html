@@ -1,0 +1,107 @@
+<div class="row justify-content-center">
+    <div>
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label class="form-control-label " jhiTranslate="lgcApp.agence.codeAgence" for="field_codeAgence">Code Agence</label>
+                    <input type="text" class="form-control" name="codeAgence" id="field_codeAgence"
+                           formControlName="codeAgence"/>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label class="form-control-label"  for="field_denominationAgence">Denomination</label>
+                    <input type="text" class="form-control" name="denominationAgence" id="field_denominationAgence"
+                           formControlName="denominationAgence"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.typeAgence" for="field_typeAgence">Type Agence</label>
+                    <input type="text" class="form-control" name="typeAgence" id="field_typeAgence"
+                           formControlName="typeAgence"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.telephone" for="field_telephone">Telephone</label>
+                    <input type="text" class="form-control" name="telephone" id="field_telephone"
+                           formControlName="telephone"/>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.numeroWhatsapp" for="field_numeroWhatsapp">Numero Whatsapp</label>
+                    <input type="text" class="form-control" name="numeroWhatsapp" id="field_numeroWhatsapp"
+                           formControlName="numeroWhatsapp"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.autreContact" for="field_autreContact">Autre Contact</label>
+                    <input type="text" class="form-control" name="autreContact" id="field_autreContact"
+                           formControlName="autreContact"/>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.quartier" for="field_quartier">Quartier</label>
+                    <input type="text" class="form-control" name="quartier" id="field_quartier"
+                           formControlName="quartier"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.arrondissement" for="field_arrondissement">Arrondissement</label>
+                    <input type="text" class="form-control" name="arrondissement" id="field_arrondissement"
+                           formControlName="arrondissement"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.commune" for="field_commune">Commune</label>
+                    <input type="text" class="form-control" name="commune" id="field_commune"
+                           formControlName="commune"/>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.province" for="field_province">Province</label>
+                    <input type="text" class="form-control" name="province" id="field_province"
+                           formControlName="province"/>
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.region" for="field_region">Region</label>
+                    <input type="text" class="form-control" name="region" id="field_region"
+                           formControlName="region"/>
+                </div>
+            </div>
+            <!--<div class="row">
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.user" for="field_user">User</label>
+                    <select class="form-control" id="field_user" name="user" formControlName="userId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userOption.id" *ngFor="let userOption of users; trackBy: trackById">{{ userOption.login }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label class="form-control-label" jhiTranslate="lgcApp.agence.client" for="field_client">Client</label>
+                    <select class="form-control" id="field_client" name="client" formControlName="clientId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="clientOption.id" *ngFor="let clientOption of clients; trackBy: trackById">{{ clientOption.denomination }}</option>
+                    </select>
+                </div>
+            </div>-->
+
+            <div>
+                <button pButton pRipple type="button"  class="p-button-rounded p-button-secondary"
+                        (click)="previousState()" label="Annuler">
+                </button>
+
+                <button type="submit" pRipple pButton [disabled]="editForm.invalid || isSaving"
+                icon="pi pi-save" iconPos="left" label="Sauvegarder" class="p-button-rounded">
+
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

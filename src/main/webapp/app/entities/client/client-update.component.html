@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="form-control-label" jhiTranslate="lgcApp.client.codeClient" for="field_codeClient">Code Client</label>
+                    <input type="text" class="form-control" name="codeClient" id="field_codeClient"
+                           formControlName="codeClient"/>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label class="form-control-label" jhiTranslate="lgcApp.client.denomination" for="field_denomination">Denomination</label>
+                    <input type="text" class="form-control" name="denomination" id="field_denomination"
+                           formControlName="denomination"/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="form-control-label" jhiTranslate="lgcApp.client.domaineActivite" for="field_domaineActivite">Domaine Activite</label>
+                    <input type="text" class="form-control" name="domaineActivite" id="field_domaineActivite"
+                           formControlName="domaineActivite"/>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label class="form-control-label" jhiTranslate="lgcApp.client.siteWeb" for="field_siteWeb">Site Web</label>
+                    <input type="text" class="form-control" name="siteWeb" id="field_siteWeb"
+                           formControlName="siteWeb"/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="form-control-label" jhiTranslate="lgcApp.client.compteFaceBook" for="field_compteFaceBook">Compte Face Book</label>
+                    <input type="text" class="form-control" name="compteFaceBook" id="field_compteFaceBook"
+                           formControlName="compteFaceBook"/>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label class="form-control-label" jhiTranslate="lgcApp.client.compteTwitter" for="field_compteTwitter">Compte Twitter</label>
+                    <input type="text" class="form-control" name="compteTwitter" id="field_compteTwitter"
+                           formControlName="compteTwitter"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" pRipple pButton class="p-button-secondary p-button-rounded"
+                        label="Annuler" (click)="previousState()">
+
+                </button>
+
+                <button pButton pRipple icon="pi pi-save" iconPos="left" type="submit" label="Sauvegarder"
+                        [disabled]="editForm.invalid || isSaving" class="p-button-rounded">
+
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
